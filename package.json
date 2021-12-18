@@ -1,0 +1,26 @@
+{
+   "name": "orm",
+   "version": "1.0.0",
+   "main": "index.js",
+   "license": "MIT",
+   "scripts": {
+      "i": "ts-node-dev --respawn --transpile-only src/app.ts",
+      "start": "ts-node src/index.ts",
+      "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
+   },
+   "dependencies": {
+      "@types/uuid": "^8.3.3",
+      "express": "^4.17.2",
+      "typeorm": "0.2.41",
+      "uuid": "^8.3.2"
+   },
+   "devDependencies": {
+      "@types/express": "^4.17.13",
+      "@types/node": "^8.0.29",
+      "pg": "^8.7.1",
+      "reflect-metadata": "^0.1.13",
+      "ts-node": "3.3.0",
+      "ts-node-dev": "^1.1.8",
+      "typescript": "3.3.3333"
+   }
+}
