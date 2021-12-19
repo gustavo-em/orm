@@ -16,6 +16,6 @@ export class Usuario {
     name: string;
 
     @OneToMany(()=> Personagem, personagem=>personagem.usuario)
-    personagens: Personagem[];
+    personagens: Personagem;
 
 }
