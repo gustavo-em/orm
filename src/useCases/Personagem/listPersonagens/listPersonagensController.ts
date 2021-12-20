@@ -2,20 +2,24 @@ import {
   Request,
   Response,
 } from 'express';
-import { getRepository } from 'typeorm';
+import { container } from 'tsyringe';
 
-import { Personagem } from '../../../entity/Personagem';
+import { listPersonagensUseCase } from './listPersonagensUseCase';
 
 export class listPersonagemController{
     async handle(req: Request, res: Response){
-        const repoPersonagem = getRepository(Personagem)
 
+        //injeção de dependencia no service
+        const pers = container.resolve(listPersonagensUseCase)
 
-        const personagens = await repoPersonagem.find({
+        //Service chamando repositorio
+        let a = await pers.execute()
+
+        /* const personagens = await repoPersonagem.find({
          
             relations: ['categoria', 'usuario']
-        });
+        }); */
 
-        return res.send(personagens)
+        return res.send(a)
     }
 }

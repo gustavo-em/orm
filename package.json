@@ -11,6 +11,7 @@
    "dependencies": {
       "@types/uuid": "^8.3.3",
       "express": "^4.17.2",
+      "tsyringe": "^4.6.0",
       "typeorm": "0.2.41",
       "uuid": "^8.3.2"
    },
